@@ -12,7 +12,7 @@ public class GiftCart extends BaseClass{
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
-		preCondition();
+		preCondition("chrome");
 		login();
 		
 		driver.findElement(By.xpath("//input[@value='Add to cart']")).click();

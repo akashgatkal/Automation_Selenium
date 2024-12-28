@@ -16,9 +16,10 @@ public class HiddenTextField {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.get("https://www.facebook.com/");
 		Thread.sleep(2000);
-		driver.findElement(By.linkText("Create new account")).click();
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+		driver.findElement(By.xpath("//a[contains(text(),'Create new account')]")).click();
+				JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement custom_gender = driver.findElement(By.id("custom_gender"));
+//		custom_gender.sendKeys("Manjulika");
 		Thread.sleep(2000);
 		js.executeAsyncScript("arguments[0].value='manjulika'", custom_gender);
 	}
